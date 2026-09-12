@@ -1,0 +1,1897 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#050907">
+<meta name="description" content="Modushub - Your Partner in Online Earning">
+<title>Modushub — Your Partner in Online Earning</title>
+
+<style>
+:root{
+  --bg:#050907;
+  --bg2:#09130e;
+  --panel:rgba(13,25,19,.84);
+  --line:rgba(151,255,69,.15);
+  --lime:#a7ff3f;
+  --lime2:#69e83d;
+  --text:#f3f8f1;
+  --muted:#9eaaa1;
+  --shadow:0 18px 55px rgba(0,0,0,.38);
+  --radius:24px;
+}
+
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,
+  "Segoe UI",Roboto,Arial,sans-serif;
+  background:
+  radial-gradient(circle at 15% 5%,rgba(117,255,54,.10),transparent 28%),
+  radial-gradient(circle at 85% 20%,rgba(41,184,91,.08),transparent 30%),
+  var(--bg);
+  color:var(--text);
+  line-height:1.6;
+  overflow-x:hidden;
+}
+
+a{
+  text-decoration:none;
+  color:inherit;
+}
+
+.container{
+  width:min(1160px,92%);
+  margin:auto;
+}
+
+/* NAVIGATION */
+
+nav{
+  position:sticky;
+  top:0;
+  z-index:1000;
+  background:rgba(5,9,7,.86);
+  backdrop-filter:blur(18px);
+  border-bottom:1px solid var(--line);
+}
+
+.navin{
+  height:72px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:20px;
+}
+
+.logo{
+  font-size:26px;
+  font-weight:900;
+  letter-spacing:-1px;
+}
+
+.logo span{
+  color:var(--lime);
+}
+
+.navlinks{
+  display:flex;
+  gap:25px;
+  color:#c7d0c9;
+  font-size:14px;
+}
+
+.navlinks a{
+  transition:.2s;
+}
+
+.navlinks a:hover{
+  color:var(--lime);
+}
+
+.btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:8px;
+  padding:13px 19px;
+  border-radius:13px;
+  font-weight:800;
+  font-size:14px;
+  border:1px solid var(--line);
+  transition:.25s;
+  cursor:pointer;
+}
+
+.btn-primary{
+  background:var(--lime);
+  color:#071006;
+  box-shadow:0 8px 30px rgba(167,255,63,.18);
+}
+
+.btn-primary:hover{
+  transform:translateY(-2px);
+  box-shadow:0 12px 36px rgba(167,255,63,.3);
+}
+
+.btn-ghost{
+  background:rgba(255,255,255,.035);
+  color:#fff;
+}
+
+.btn-ghost:hover{
+  border-color:var(--lime);
+  color:var(--lime);
+}
+
+/* HERO */
+
+.hero{
+  padding:75px 0 55px;
+}
+
+.hero-grid{
+  display:grid;
+  grid-template-columns:1.1fr .9fr;
+  gap:48px;
+  align-items:center;
+}
+
+.badge{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  padding:8px 13px;
+  border:1px solid var(--line);
+  background:rgba(167,255,63,.055);
+  border-radius:999px;
+  color:#cfe8c9;
+  font-size:12px;
+  font-weight:800;
+  margin-bottom:18px;
+}
+
+.dot{
+  width:8px;
+  height:8px;
+  background:var(--lime);
+  border-radius:50%;
+  box-shadow:0 0 14px var(--lime);
+  animation:pulse 1.4s infinite;
+}
+
+@keyframes pulse{
+  50%{
+    opacity:.35;
+    transform:scale(.75);
+  }
+}
+
+h1{
+  font-size:clamp(42px,7vw,74px);
+  line-height:.98;
+  letter-spacing:-3.5px;
+  max-width:760px;
+}
+
+h1 span{
+  color:var(--lime);
+}
+
+.hero p{
+  color:var(--muted);
+  font-size:17px;
+  max-width:680px;
+  margin:23px 0;
+}
+
+.actions{
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap;
+}
+
+.mini{
+  display:flex;
+  gap:12px;
+  align-items:center;
+  margin-top:25px;
+  color:#adb9b0;
+  font-size:12px;
+}
+
+.avatars{
+  display:flex;
+}
+
+.avatars img{
+  width:31px;
+  height:31px;
+  border-radius:50%;
+  border:2px solid var(--bg);
+  margin-left:-8px;
+}
+
+.avatars img:first-child{
+  margin-left:0;
+}
+
+/* HERO CARD */
+
+.hero-card,
+.card{
+  background:
+  linear-gradient(
+    145deg,
+    rgba(18,33,25,.9),
+    rgba(8,16,12,.78)
+  );
+  border:1px solid var(--line);
+  border-radius:var(--radius);
+  box-shadow:var(--shadow);
+}
+
+.hero-card{
+  padding:20px;
+  position:relative;
+  overflow:hidden;
+}
+
+.hero-card:before{
+  content:"";
+  position:absolute;
+  width:240px;
+  height:240px;
+  background:rgba(167,255,63,.12);
+  filter:blur(70px);
+  top:-90px;
+  right:-70px;
+}
+
+.mock-top{
+  display:flex;
+  justify-content:space-between;
+  color:#91a097;
+  font-size:11px;
+  margin-bottom:18px;
+}
+
+.status{
+  color:var(--lime);
+}
+
+.balance{
+  padding:20px;
+  border-radius:19px;
+  background:rgba(255,255,255,.045);
+  border:1px solid rgba(255,255,255,.07);
+}
+
+.balance small{
+  color:#9daaa0;
+}
+
+.amount{
+  font-size:34px;
+  font-weight:900;
+  margin:3px 0 15px;
+}
+
+.gain{
+  color:var(--lime);
+  font-size:12px;
+}
+
+.mock-row{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:10px;
+  margin-top:10px;
+}
+
+.metric{
+  padding:14px;
+  border-radius:16px;
+  background:rgba(255,255,255,.035);
+}
+
+.metric b{
+  display:block;
+  font-size:20px;
+}
+
+.metric span{
+  font-size:11px;
+  color:#87938b;
+}
+
+.activity{
+  margin-top:10px;
+}
+
+.activity div{
+  display:flex;
+  justify-content:space-between;
+  padding:10px 0;
+  border-bottom:1px solid rgba(255,255,255,.05);
+  font-size:12px;
+}
+
+.activity div:last-child{
+  border:0;
+}
+
+.green{
+  color:var(--lime);
+}
+
+/* SECTIONS */
+
+section{
+  padding:70px 0;
+}
+
+.section-head{
+  text-align:center;
+  max-width:730px;
+  margin:0 auto 35px;
+}
+
+.eyebrow{
+  color:var(--lime);
+  font-weight:900;
+  font-size:12px;
+  text-transform:uppercase;
+  letter-spacing:2px;
+}
+
+.section-head h2{
+  font-size:clamp(30px,5vw,48px);
+  letter-spacing:-1.7px;
+  margin:8px 0;
+}
+
+.section-head p{
+  color:var(--muted);
+}
+
+/* STATS */
+
+.stats{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:12px;
+}
+
+.stat{
+  padding:23px;
+  text-align:center;
+}
+
+.stat b{
+  display:block;
+  font-size:29px;
+  color:var(--lime);
+}
+
+.stat span{
+  color:#8f9b92;
+  font-size:12px;
+}
+
+/* HOW IT WORKS */
+
+.steps{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:15px;
+}
+
+.step{
+  padding:25px;
+}
+
+.number{
+  color:var(--lime);
+  font-size:12px;
+  font-weight:900;
+}
+
+.step h3{
+  margin:10px 0 6px;
+}
+
+.step p{
+  color:var(--muted);
+  font-size:13px;
+}
+
+/* EARNING CARDS */
+
+.earn-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:14px;
+}
+
+.earn{
+  padding:22px;
+  transition:.25s;
+}
+
+.earn:hover{
+  transform:translateY(-5px);
+  border-color:rgba(167,255,63,.4);
+}
+
+.icon{
+  font-size:27px;
+}
+
+.earn h3{
+  font-size:16px;
+  margin:10px 0 4px;
+}
+
+.earn p{
+  color:var(--muted);
+  font-size:13px;
+}
+
+.earning{
+  display:inline-block;
+  margin-top:12px;
+  color:var(--lime);
+  font-size:12px;
+  font-weight:800;
+}
+
+/* DASHBOARD */
+
+.dashboard{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:20px;
+  align-items:center;
+}
+
+.dash-copy p{
+  color:var(--muted);
+  margin:15px 0 22px;
+}
+
+.dash{
+  padding:20px;
+}
+
+.bar{
+  height:9px;
+  background:#17251c;
+  border-radius:99px;
+  overflow:hidden;
+  margin:8px 0 15px;
+}
+
+.bar i{
+  display:block;
+  height:100%;
+  width:82%;
+  background:linear-gradient(90deg,var(--lime2),var(--lime));
+  border-radius:99px;
+}
+
+.dash-stat{
+  display:flex;
+  justify-content:space-between;
+  font-size:12px;
+  color:#aab5ad;
+}
+
+/* STORIES */
+
+.stories{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:14px;
+}
+
+.story{
+  padding:24px;
+}
+
+.person{
+  display:flex;
+  gap:12px;
+  align-items:center;
+  margin-bottom:14px;
+}
+
+.person img{
+  width:45px;
+  height:45px;
+  border-radius:50%;
+}
+
+.person b{
+  display:block;
+}
+
+.person small{
+  color:#78847c;
+  font-size:11px;
+}
+
+.quote{
+  color:#fff !important;
+  font-size:14px !important;
+}
+
+/* COUNTRIES */
+
+.countries{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:12px;
+}
+
+.country{
+  padding:20px;
+}
+
+.country h3{
+  font-size:15px;
+  margin-bottom:7px;
+}
+
+.country p{
+  color:var(--muted);
+  font-size:13px;
+  line-height:1.9;
+}
+
+/* FAQ */
+
+.faq{
+  max-width:850px;
+  margin:auto;
+}
+
+.faq details{
+  border:1px solid var(--line);
+  background:rgba(255,255,255,.025);
+  border-radius:15px;
+  margin:10px 0;
+  padding:17px 19px;
+}
+
+.faq summary{
+  cursor:pointer;
+  font-weight:800;
+}
+
+.faq p{
+  color:var(--muted);
+  font-size:13px;
+  padding-top:12px;
+}
+
+/* CTA */
+
+.cta{
+  padding:55px 25px;
+  text-align:center;
+  background:
+  linear-gradient(
+    135deg,
+    rgba(167,255,63,.10),
+    rgba(21,66,39,.18)
+  );
+  border:1px solid var(--line);
+  border-radius:30px;
+}
+
+.cta h2{
+  font-size:clamp(30px,5vw,50px);
+  letter-spacing:-2px;
+}
+
+.cta p{
+  color:var(--muted);
+  margin:12px auto 23px;
+  max-width:650px;
+}
+
+/* FOOTER */
+
+footer{
+  border-top:1px solid var(--line);
+  padding:35px 0 90px;
+  color:#8e9991;
+  font-size:12px;
+}
+
+.foot{
+  display:flex;
+  justify-content:space-between;
+  gap:20px;
+  flex-wrap:wrap;
+}
+
+.foot strong{
+  color:#fff;
+  font-size:18px;
+}
+
+.foot a:hover{
+  color:var(--lime);
+}
+
+/* WHATSAPP */
+
+.whatsapp{
+  position:fixed;
+  right:18px;
+  bottom:70px;
+  z-index:1001;
+  width:54px;
+  height:54px;
+  border-radius:50%;
+  display:grid;
+  place-items:center;
+  background:#25d366;
+  color:#fff;
+  font-size:25px;
+  box-shadow:0 8px 30px rgba(37,211,102,.3);
+  transition:.2s;
+}
+
+.whatsapp:hover{
+  transform:scale(1.08);
+}
+
+/* LIVE TICKER */
+
+.ticker{
+  position:fixed;
+  bottom:0;
+  left:0;
+  right:0;
+  z-index:999;
+  background:#0a120d;
+  border-top:1px solid var(--line);
+  height:42px;
+  display:flex;
+  align-items:center;
+  overflow:hidden;
+}
+
+.ticker-track{
+  display:flex;
+  gap:50px;
+  white-space:nowrap;
+  animation:scroll 32s linear infinite;
+  color:#b6c1b9;
+  font-size:11px;
+}
+
+.ticker b{
+  color:var(--lime);
+}
+
+@keyframes scroll{
+  to{
+    transform:translateX(-50%);
+  }
+}
+
+/* MOBILE */
+
+@media(max-width:850px){
+
+  .navlinks{
+    display:none;
+  }
+
+  .hero-grid,
+  .dashboard{
+    grid-template-columns:1fr;
+  }
+
+  .hero{
+    padding-top:45px;
+  }
+
+  .stats{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .steps,
+  .earn-grid{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .stories{
+    grid-template-columns:1fr;
+  }
+
+  .countries{
+    grid-template-columns:1fr 1fr;
+  }
+}
+
+@media(max-width:560px){
+
+  h1{
+    letter-spacing:-2.5px;
+  }
+
+  .hero p{
+    font-size:15px;
+  }
+
+  .stats,
+  .steps,
+  .earn-grid,
+  .countries{
+    grid-template-columns:1fr;
+  }
+
+  .navin{
+    height:64px;
+  }
+
+  .navin .btn{
+    padding:10px 13px;
+  }
+
+  .hero-card{
+    padding:15px;
+  }
+
+  .cta{
+    padding:40px 18px;
+  }
+
+  .ticker{
+    height:38px;
+  }
+
+  .whatsapp{
+    bottom:52px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVIGATION -->
+<nav>
+  <div class="container navin">
+
+    <a class="logo" href="#">
+      Modu<span>shub</span>
+    </a>
+
+    <div class="navlinks">
+      <a href="#how">How It Works</a>
+      <a href="#earn">Ways To Earn</a>
+      <a href="#stories">Stories</a>
+      <a href="#faq">FAQ</a>
+    </div>
+
+    <a
+      class="btn btn-primary"
+      href="https://stateflix.com/user/register.php?ref=modushub">
+      JOIN FREE
+    </a>
+
+  </div>
+</nav>
+
+
+<main>
+
+<!-- HERO -->
+<section class="hero">
+
+  <div class="container hero-grid">
+
+    <div>
+
+      <div class="badge">
+        <i class="dot"></i>
+        LIVE — 50,257+ Members Earning Right Now
+      </div>
+
+      <h1>
+        Welcome To
+        <span>Modushub</span>
+        <br>
+        Your Partner In Online Earning
+      </h1>
+
+      <p>
+        Earn UGX 30,000–150,000+ every day paid straight to Mobile Money Wallet —
+        chat with foreigners, watch videos, play games, and more.
+        No experience. No investment. Just your phone.
+      </p>
+
+      <div class="actions">
+
+        <a
+          class="btn btn-primary"
+          href="https://stateflix.com/user/register.php?ref=modushub">
+          Create Free Account ↗
+        </a>
+
+        <a
+          class="btn btn-ghost"
+          href="#how">
+          How To Start Earning ↓
+        </a>
+
+      </div>
+
+      <div class="mini">
+
+        <div class="avatars">
+          <img src="https://i.pravatar.cc/80?img=12">
+          <img src="https://i.pravatar.cc/80?img=32">
+          <img src="https://i.pravatar.cc/80?img=47">
+          <img src="https://i.pravatar.cc/80?img=56">
+        </div>
+
+        <span>
+          People across Africa are joining every day
+        </span>
+
+      </div>
+
+    </div>
+
+
+    <!-- HERO DASHBOARD -->
+    <div class="hero-card">
+
+      <div class="mock-top">
+        <span>LIVE EARNINGS</span>
+        <span class="status">● ONLINE</span>
+      </div>
+
+      <div class="balance">
+
+        <small>Today's earnings</small>
+
+        <div class="amount">
+          UGX 47,850
+        </div>
+
+        <span class="gain">
+          +18.4% today
+        </span>
+
+      </div>
+
+      <div class="mock-row">
+
+        <div class="metric">
+          <b>12</b>
+          <span>Ways to earn</span>
+        </div>
+
+        <div class="metric">
+          <b>99.4%</b>
+          <span>Payout success</span>
+        </div>
+
+      </div>
+
+      <div class="activity">
+
+        <div>
+          <span>Chat task completed</span>
+          <b class="green">+UGX 8,500</b>
+        </div>
+
+        <div>
+          <span>Video task completed</span>
+          <b class="green">+UGX 3,000</b>
+        </div>
+
+        <div>
+          <span>Survey completed</span>
+          <b class="green">+UGX 5,000</b>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- STATS -->
+<section>
+
+  <div class="container stats">
+
+    <div class="card stat">
+      <b>50,000+</b>
+      <span>Active Earners</span>
+    </div>
+
+    <div class="card stat">
+      <b>UGX 1.2B+</b>
+      <span>Paid Out Total</span>
+    </div>
+
+    <div class="card stat">
+      <b>12+</b>
+      <span>Ways To Earn</span>
+    </div>
+
+    <div class="card stat">
+      <b>3 min</b>
+      <span>Loan Approval</span>
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- HOW IT WORKS -->
+<section id="how">
+
+  <div class="container">
+
+    <div class="section-head">
+
+      <div class="eyebrow">
+        Simple process
+      </div>
+
+      <h2>
+        How It Works
+      </h2>
+
+      <p>
+        Start earning from your phone in three simple steps.
+      </p>
+
+    </div>
+
+
+    <div class="steps">
+
+      <div class="card step">
+
+        <div class="number">01</div>
+
+        <h3>
+          Register
+        </h3>
+
+        <p>
+          Create your free Modushub account and get access
+          to available earning opportunities.
+        </p>
+
+      </div>
+
+
+      <div class="card step">
+
+        <div class="number">02</div>
+
+        <h3>
+          Pick Tasks
+        </h3>
+
+        <p>
+          Choose activities that suit you, complete them
+          and build your earnings.
+        </p>
+
+      </div>
+
+
+      <div class="card step">
+
+        <div class="number">03</div>
+
+        <h3>
+          Withdraw Instantly
+        </h3>
+
+        <p>
+          Request your payout to a supported Mobile Money
+          wallet when eligible.
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- WAYS TO EARN -->
+<section id="earn">
+
+  <div class="container">
+
+    <div class="section-head">
+
+      <div class="eyebrow">
+        Opportunities
+      </div>
+
+      <h2>
+        12 Ways To Earn
+      </h2>
+
+      <p>
+        Choose from a range of activities available through
+        the platform.
+      </p>
+
+    </div>
+
+
+    <div class="earn-grid">
+
+
+      <div class="card earn">
+
+        <div class="icon">💬</div>
+
+        <h3>
+          Chat with Foreigners
+        </h3>
+
+        <p>
+          Connect and have conversations with people
+          from around the world.
+        </p>
+
+        <span class="earning">
+          UGX 25,000–40,000/day
+        </span>
+
+      </div>
+
+
+      <div class="card earn">
+
+        <div class="icon">🎬</div>
+
+        <h3>
+          Watch Videos
+        </h3>
+
+        <p>
+          Watch available videos and complete
+          viewing tasks.
+        </p>
+
+        <span class="earning">
+          UGX 3,000 per video
+        </span>
+
+      </div>
+
+
+      <div class="card earn">
+
+        <div class="icon">🎮</div>
+
+        <h3>
+          Play Online Games
+        </h3>
+
+        <p>
+          Complete game activities and levels.
+        </p>
+
+        <span class="earning">
+          UGX 2,500 per level
+        </span>
+
+      </div>
+
+
+      <div class="card earn">
+
+        <div class="icon">🎵</div>
+
+        <h3>
+          Listen to Music
+        </h3>
+
+        <p>
+          Listen to available tracks and complete
+          music tasks.
+        </p>
+
+        <span class="earning">
+          UGX 8,000 per track
+        </span>
+
+      </div>
+
+
+      <div class="card earn">
+
+        <div class="icon">🧠</div>
+
+        <h3>
+          Trivia Quizzes
+        </h3>
+
+        <p>
+          Answer questions and earn based on
+          completed quizzes.
+        </p>
+
+        <span class="earning">
+          More correct = more cash
+        </span>
+
+      </div>
+
+
+      <div class="card earn">
+
+        <div class="icon">🖱️</div>
+
+        <h3>
+          Click Paid Ads
+        </h3>
+
+        <p>
+          View qualifying advertisements and
+          complete the required action.
+        </p>
+
+        <span class="earning">
+          UGX 2,000 per ad
+        </span>
+
+      </div>
+
+
+      <div class="card earn">
+
+        <div class="icon">📱</div>
+
+        <h3>
+          WhatsApp Status Views
+        </h3>
+
+        <p>
+          Participate in qualifying status-view
+          activities.
+        </p>
+
+        <span class="earning">
+          Views = earnings
+        </span>
+
+      </div>
+
+
+      <div class="card earn">
+
+        <div class="icon">📲</div>
+
+        <h3>
+          Download & Test Apps
+        </h3>
+
+        <p>
+          Install and test qualifying applications.
+        </p>
+
+        <span class="earning">
+          UGX 4,000 per app tested
+        </span>
+
+      </div>
+
+
+      <div class="card earn">
+
+        <div class="icon">🎁</div>
+
+        <h3>
+          Daily Login Bonus
+        </h3>
+
+        <p>
+          Keep your account active by checking in regularly.
+        </p>
+
+        <span class="earning">
+          Just show up
+        </span>
+
+      </div>
+
+
+      <div class="card earn">
+
+        <div class="icon">🎡</div>
+
+        <h3>
+          Daily Spin & Win
+        </h3>
+
+        <p>
+          Take part in the daily spin opportunity.
+        </p>
+
+        <span class="earning">
+          Up to UGX 70,000
+        </span>
+
+      </div>
+
+
+      <div class="card earn">
+
+        <div class="icon">📋</div>
+
+        <h3>
+          Paid Surveys
+        </h3>
+
+        <p>
+          Complete qualifying surveys and submit
+          your responses.
+        </p>
+
+        <span class="earning">
+          UGX 5,000 per survey
+        </span>
+
+      </div>
+
+
+      <div class="card earn">
+
+        <div class="icon">💸</div>
+
+        <h3>
+          Instant Loans
+        </h3>
+
+        <p>
+          Access the loan section where eligible
+          users can apply.
+        </p>
+
+        <span class="earning">
+          UGX 50K–500K
+        </span>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- DASHBOARD -->
+<section>
+
+  <div class="container dashboard">
+
+    <div class="dash-copy">
+
+      <div class="eyebrow">
+        Your progress
+      </div>
+
+      <h2>
+        Real-Time Earnings Dashboard
+      </h2>
+
+      <p>
+        Keep track of activities, progress and payout
+        information from one convenient dashboard.
+      </p>
+
+      <a
+        class="btn btn-primary"
+        href="https://stateflix.com/user/register.php?ref=modushub">
+        Get Started Free
+      </a>
+
+    </div>
+
+
+    <div class="card dash">
+
+      <div class="dash-stat">
+        <span>Monthly target</span>
+        <b>UGX 300,000</b>
+      </div>
+
+      <div class="bar">
+        <i></i>
+      </div>
+
+      <div class="dash-stat">
+        <span>Current progress</span>
+        <b class="green">82%</b>
+      </div>
+
+
+      <div class="mock-row" style="margin-top:20px">
+
+        <div class="metric">
+          <b>99.4%</b>
+          <span>Payout success</span>
+        </div>
+
+        <div class="metric">
+          <b>&lt;5 min</b>
+          <span>Wallet delivery</span>
+        </div>
+
+      </div>
+
+
+      <div class="activity">
+
+        <div>
+          <span>Support</span>
+          <b class="green">24/7</b>
+        </div>
+
+        <div>
+          <span>Tasks completed</span>
+          <b>128</b>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- GLOBAL CONVERSATIONS -->
+<section>
+
+  <div class="container">
+
+    <div class="section-head">
+
+      <div class="eyebrow">
+        Global Conversations
+      </div>
+
+      <h2>
+        Chat With People Around The World
+      </h2>
+
+      <p>
+        Connect with people from different countries
+        through available conversation opportunities.
+      </p>
+
+    </div>
+
+
+    <div class="card" style="padding:25px">
+
+      <div class="activity">
+
+        <div>
+          <span>🇺🇸 Active conversation</span>
+          <b class="green">UGX 10,000</b>
+        </div>
+
+        <div>
+          <span>🇬🇧 Active conversation</span>
+          <b class="green">UGX 14,500</b>
+        </div>
+
+        <div>
+          <span>🇨🇦 Active conversation</span>
+          <b class="green">UGX 17,000</b>
+        </div>
+
+        <div>
+          <span>🇦🇺 Active conversation</span>
+          <b class="green">UGX 12,000</b>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- TESTIMONIALS -->
+<section id="stories">
+
+  <div class="container">
+
+    <div class="section-head">
+
+      <div class="eyebrow">
+        Community
+      </div>
+
+      <h2>
+        Real Stories
+      </h2>
+
+      <p>
+        Stories and experiences shared by members.
+      </p>
+
+    </div>
+
+
+    <div class="stories">
+
+
+      <div class="card story">
+
+        <div class="person">
+
+          <img src="https://i.pravatar.cc/80?img=12">
+
+          <div>
+            <b>David T.</b>
+            <small>
+              Businessman · Nairobi, Kenya
+            </small>
+          </div>
+
+        </div>
+
+        <p class="quote">
+          “Earned KSH 150,000+ in one week.”
+        </p>
+
+      </div>
+
+
+      <div class="card story">
+
+        <div class="person">
+
+          <img src="https://i.pravatar.cc/80?img=32">
+
+          <div>
+            <b>Aisha M.</b>
+            <small>
+              Shop Owner · Kampala, Uganda
+            </small>
+          </div>
+
+        </div>
+
+        <p class="quote">
+          “Earning UGX 80,000+ daily consistently.”
+        </p>
+
+      </div>
+
+
+      <div class="card story">
+
+        <div class="person">
+
+          <img src="https://i.pravatar.cc/80?img=47">
+
+          <div>
+            <b>Tendo N.</b>
+            <small>
+              Student · Lagos, Nigeria
+            </small>
+          </div>
+
+        </div>
+
+        <p class="quote">
+          “Withdrew 45,000 UGX within first 3 days.”
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- COVERAGE -->
+<section>
+
+  <div class="container">
+
+    <div class="section-head">
+
+      <div class="eyebrow">
+        Across Africa
+      </div>
+
+      <h2>
+        Where We Cover
+      </h2>
+
+      <p>
+        Modushub is presented for users across multiple
+        African markets.
+      </p>
+
+    </div>
+
+
+    <div class="countries">
+
+
+      <div class="card country">
+
+        <h3>
+          East Africa
+        </h3>
+
+        <p>
+          🇺🇬 Uganda<br>
+          🇰🇪 Kenya<br>
+          🇹🇿 Tanzania<br>
+          🇷🇼 Rwanda<br>
+          🇧🇮 Burundi
+        </p>
+
+      </div>
+
+
+      <div class="card country">
+
+        <h3>
+          West Africa
+        </h3>
+
+        <p>
+          🇳🇬 Nigeria<br>
+          🇬🇭 Ghana<br>
+          🇸🇳 Senegal<br>
+          🇲🇱 Mali<br>
+          🇧🇫 Burkina Faso
+        </p>
+
+      </div>
+
+
+      <div class="card country">
+
+        <h3>
+          Central Africa
+        </h3>
+
+        <p>
+          🇨🇩 DR Congo<br>
+          🇨🇲 Cameroon<br>
+          🇨🇫 CAR<br>
+          🇬🇶 Eq Guinea<br>
+          🇬🇦 Gabon
+        </p>
+
+      </div>
+
+
+      <div class="card country">
+
+        <h3>
+          Southern Africa
+        </h3>
+
+        <p>
+          🇿🇦 South Africa<br>
+          🇿🇲 Zambia<br>
+          🇧🇼 Botswana<br>
+          🇲🇼 Malawi<br>
+          🇳🇦 Namibia
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- FAQ -->
+<section id="faq">
+
+  <div class="container">
+
+    <div class="section-head">
+
+      <div class="eyebrow">
+        Questions
+      </div>
+
+      <h2>
+        Frequently Asked Questions
+      </h2>
+
+    </div>
+
+
+    <div class="faq">
+
+
+      <details>
+
+        <summary>
+          How do I join Modushub?
+        </summary>
+
+        <p>
+          Click any Create Free Account or JOIN FREE button
+          and complete the registration process.
+        </p>
+
+      </details>
+
+
+      <details>
+
+        <summary>
+          Do I need experience?
+        </summary>
+
+        <p>
+          The landing page presents opportunities designed
+          to be accessible to users without specialist experience.
+        </p>
+
+      </details>
+
+
+      <details>
+
+        <summary>
+          How do withdrawals work?
+        </summary>
+
+        <p>
+          Eligible users can request withdrawals through
+          the supported payout process associated with their account.
+        </p>
+
+      </details>
+
+
+      <details>
+
+        <summary>
+          Can I use my phone?
+        </summary>
+
+        <p>
+          Yes. The website is designed to be mobile-friendly
+          and the opportunities are presented for phone users.
+        </p>
+
+      </details>
+
+
+      <details>
+
+        <summary>
+          Is registration free?
+        </summary>
+
+        <p>
+          The advertised signup is presented as free.
+          Always review the current registration and platform
+          terms before making any payment.
+        </p>
+
+      </details>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- FINAL CTA -->
+<section>
+
+  <div class="container">
+
+    <div class="cta">
+
+      <h2>
+        Join 50,000+ people earning daily on Modushub.
+      </h2>
+
+      <p>
+        Free signup. No experience needed.
+        Instant withdrawals to Mobile Money.
+      </p>
+
+      <a
+        class="btn btn-primary"
+        href="https://stateflix.com/user/register.php?ref=modushub">
+        Create Your Free Account ↗
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+</main>
+
+
+<!-- FOOTER -->
+<footer>
+
+  <div class="container foot">
+
+    <div>
+      <strong>Modushub</strong>
+      <br>
+      <span>
+        Your Partner in Online Earning
+      </span>
+    </div>
+
+    <div>
+      support@modushub.site
+      <br>
+      Kampala, Uganda
+    </div>
+
+    <div>
+      <a href="https://wa.me/256747976629">
+        WhatsApp Support
+      </a>
+      <br>
+      © 2026 Modushub.site
+    </div>
+
+  </div>
+
+</footer>
+
+
+<!-- FLOATING WHATSAPP -->
+<a
+  class="whatsapp"
+  href="https://wa.me/256705212002"
+  aria-label="WhatsApp">
+  ☎
+</a>
+
+
+<!-- LIVE ACTIVITY TICKER -->
+<div class="ticker">
+
+  <div class="ticker-track">
+
+    <span>
+      🟢 Mercy W. earned
+      <b>UGX 7,978</b>
+    </span>
+
+    <span>
+      🟢 Joyce M. deposited
+      <b>UGX 19,000</b>
+    </span>
+
+    <span>
+      🟢 Kwame A. activated account
+    </span>
+
+    <span>
+      🟢 James O. earned
+      <b>UGX 45,227</b>
+    </span>
+
+    <span>
+      🟢 Daniel P. withdrew
+      <b>UGX 61,137</b>
+    </span>
+
+    <span>
+      🟢 Kelvin S. withdrew
+      <b>UGX 205,579</b>
+    </span>
+
+    <span>
+      🟢 Naomi C. earned
+      <b>UGX 17,124</b>
+    </span>
+
+    <span>
+      🟢 Precious O. earned
+      <b>UGX 40,625</b>
+    </span>
+
+    <span>
+      🟢 Joyce M. withdrew
+      <b>UGX 99,037</b>
+    </span>
+
+    <span>
+      🟢 Fatima S. activated account
+    </span>
+
+    <span>
+      🟢 David M. activated account
+    </span>
+
+    <span>
+      🟢 Kelvin S. earned
+      <b>UGX 3,169</b>
+    </span>
+
+    <span>
+      🟢 Mercy W. earned
+      <b>UGX 7,978</b>
+    </span>
+
+    <span>
+      🟢 Joyce M. deposited
+      <b>UGX 19,000</b>
+    </span>
+
+    <span>
+      🟢 Kwame A. activated account
+    </span>
+
+    <span>
+      🟢 James O. earned
+      <b>UGX 45,227</b>
+    </span>
+
+    <span>
+      🟢 Daniel P. withdrew
+      <b>UGX 61,137</b>
+    </span>
+
+  </div>
+
+</div>
+
+</body>
+</html>
